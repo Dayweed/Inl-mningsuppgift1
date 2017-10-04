@@ -40,15 +40,7 @@ public class Inlämningsuppgift1 {
 							+ "The following animals are registered at HealthyPets:\n" + listToString);
 				else{
 					double food;										//Variabel för mängden mat som ska ges.
-					if(animals.get(index) instanceof Cat || animals.get(index) instanceof Dog){				//Listan har Animal som referens, men för att nå metoder i subklasserna behövs en typomvandling.
-						Mammal a = (Mammal) animals.get(index);				//Typomvandling.
-						food = a.calculateFood();						//Lagrar mängden mat.
-					}
-					else{												//Snake är enda subklassen som finns kvar.
-						Snake a = (Snake) animals.get(index);			//Typomvandling.
-						food = a.calculateFood();						//Lagrar mängden mat.
-					}
-					showMessageDialog(null, animals.get(index).getName() + " should have " + food + "g " + animals.get(index).getFoodType() + ".");
+					showMessageDialog(null, animals.get(index).getName() + " should have " + animals.get(index).calculateFood() + "g " + animals.get(index).getFoodType() + ".");
 					index = -1;
 				}
 			}
