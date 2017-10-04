@@ -12,20 +12,20 @@ public class Inlämningsuppgift1 {
 		String input = "";											//Variabel för användarinput.
 		String listToString = "";									//Variabel för Lista med inlagda djur.
 		int index = -1;												//Variabel för index i djurlistan. -1 som startvärde ifall djuret ej skulle finnas.
-		Dog sixten = new Dog("Sixten", 5000.0);						//Skapande av djur objekt.
-		Dog dogge = new Dog("Dogge", 10000.0);
-		Cat ove = new Cat("Ove", 3000.0);
-		Cat venus = new Cat("Venus", 5000.0);
-		Snake hypno = new Snake("Hypno", 1000);
+		IFood sixten = new Dog("Sixten", 5000.0);					//Skapande av djur objekt.
+		IFood dogge = new Dog("Dogge", 10000.0);
+		IFood ove = new Cat("Ove", 3000.0);
+		IFood venus = new Cat("Venus", 5000.0);
+		IFood hypno = new Snake("Hypno", 1000);
 		
-		List<Animal> animals = new ArrayList<>();					//Lista där alla djur läggs in.
+		List<IFood> animals = new ArrayList<>();					//Lista där alla djur läggs in.
 		animals.add(sixten);
 		animals.add(dogge);
 		animals.add(ove);
 		animals.add(venus);
 		animals.add(hypno);
 		
-		for(Animal a : animals){									//Får alla djurnamn i listan som text.
+		for(IFood a : animals){									//Får alla djurnamn i listan som text.
 			listToString += "- " + a.getName() + "\n";
 		}
 		while(true){																						//Loop så länge som användaren vill använda programmet.

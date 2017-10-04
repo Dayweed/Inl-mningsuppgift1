@@ -1,6 +1,6 @@
 package inlämningsuppgift1;
 
-public class Snake extends Animal implements IFood{
+public class Snake extends Animal implements IFood{	//Använder intefacet då Snake ärver direkt från Animal.
 	public Snake(String name, double weight){
 		super(name, weight);
 	}
