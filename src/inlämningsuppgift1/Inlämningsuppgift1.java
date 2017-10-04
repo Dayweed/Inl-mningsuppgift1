@@ -9,7 +9,7 @@ public class Inlämningsuppgift1 {
         Inlämningsuppgift1 a = new Inlämningsuppgift1();			//Vi bryter ut oss ur den statiska metoden main.
     }
 	public Inlämningsuppgift1(){
-		String input = "";												//Variabel för användarinput.
+		String input = "";											//Variabel för användarinput.
 		String listToString = "";									//Variabel för Lista med inlagda djur.
 		int index = -1;												//Variabel för index i djurlistan. -1 som startvärde ifall djuret ej skulle finnas.
 		Dog sixten = new Dog("Sixten", 5000.0);						//Skapande av djur objekt.
@@ -40,12 +40,8 @@ public class Inlämningsuppgift1 {
 							+ "The following animals are registered at HealthyPets:\n" + listToString);
 				else{
 					double food;										//Variabel för mängden mat som ska ges.
-					if(animals.get(index) instanceof Cat){				//Listan har Animal som referens, men för att nå metoder i subklasserna behövs en typomvandling.
-						Cat a = (Cat) animals.get(index);				//Typomvandling.
-						food = a.calculateFood();						//Lagrar mängden mat.
-					}
-					else if(animals.get(index) instanceof Dog){			//Kollar klass.
-						Dog a = (Dog) animals.get(index);				//Typomvandling.
+					if(animals.get(index) instanceof Cat || animals.get(index) instanceof Dog){				//Listan har Animal som referens, men för att nå metoder i subklasserna behövs en typomvandling.
+						Mammal a = (Mammal) animals.get(index);				//Typomvandling.
 						food = a.calculateFood();						//Lagrar mängden mat.
 					}
 					else{												//Snake är enda subklassen som finns kvar.

@@ -2,7 +2,7 @@ package inlämningsuppgift1;
 
 public abstract class Animal {
 	protected String name;
-	protected double weight;
+	private double weight;
 ;
 	public Animal(){}
 	public Animal(String name, double weight){
@@ -15,7 +15,7 @@ public abstract class Animal {
 	public String getFoodType(){
 		return "animal food";
 	}
-	public String getName(){
+	public String getName(){					//Dynamisk, när objekt av Cat, Dog och Snake kallar på metoden så nås den i superklassen Animal.
 		return name;
 	}
 }

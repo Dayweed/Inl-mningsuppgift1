@@ -6,7 +6,7 @@ public class Cat extends Mammal{
 	}
 	@Override
 	public double calculateFood(){					//Dynamsik bindning.
-		return weight/150;
+		return super.getWeight()/150;
 	}
 	@Override
 	public String getFoodType(){					//Polymorfism.
